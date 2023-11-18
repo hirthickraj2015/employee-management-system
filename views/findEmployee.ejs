@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+<div class="container">
+    <div class="content">
+        <h1>Find Employee</h1>
+        <form action="/findEmployee" method="post" class="form-inline">
+            <label for="searchInput" class="mr-sm-2">Find by ID or Name:</label>
+            <input type="text" id="searchInput" name="searchInput" class="form-control mb-2 mr-sm-2" required>
+            <button type="submit" class="btn btn-primary mb-2">Find</button>
+        </form>
+    </div>
+    <a href="/" class="back-link"><button class="btn btn-primary">Back to Home</button></a>
+</div>
+<%- include('partials/footer') %>

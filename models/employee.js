@@ -1,8 +1,7 @@
-// Install mongoose using npm install mongoose
+
 import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
-// Define the Employee schema
 const employeeSchema = new Schema({
   name: {
     type: String,
@@ -24,9 +23,12 @@ const employeeSchema = new Schema({
     type: String,
     required: true,
   },
+  id: {
+    type: String,
+    required: true,
+  },
 });
 
-// Create Employee model
 const Employee = mongoose.model('Employee', employeeSchema);
 
 export default Employee;

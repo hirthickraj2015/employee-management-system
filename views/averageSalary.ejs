@@ -1,0 +1,42 @@
+<%- include('partials/header') %>
+
+<div class="container">
+    <div class="content">
+        <h1>Average Salary Calculation</h1>
+
+        <form action="/averageSalary" method="post">
+            <div class="form-group">
+                <label for="choice">Choose Calculation:</label>
+                <select class="form-control" id="choice" name="choice">
+                    <option value="total">Total Average Salary</option>
+                    <option value="department">Average Salary by Department</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="departmentInput" style="display: none;">
+                <label for="department">Choose Department:</label>
+                <select class="form-control" id="department" name="department">
+                    <% departments.forEach(dept => { %>
+                        <option value="<%= dept %>"><%= dept %></option>
+                    <% }); %>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Calculate</button>
+        </form>
+        <a href="/" class="back-link"><button class="btn btn-primary">Back to Home</button></a>
+        <script>
+            document.getElementById('choice').addEventListener('change', function () {
+                const departmentInput = document.getElementById('departmentInput');
+                if (this.value === 'department') {
+                    departmentInput.style.display = 'block';
+                } else {
+                    departmentInput.style.display = 'none';
+                }
+            });
+        </script>
+    </div>
+</div>
+
+<%- include('partials/footer') %>
+

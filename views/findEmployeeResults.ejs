@@ -2,7 +2,7 @@
 
 <div class="container">
     <div class="content">
-        <h1>List of All Employees</h1>
+        <h1>Find Employee Result for "<%= searchInput %>"</h1>
         <% if (employees && employees.length > 0) { %>
             <ul class="list-group">
                 <% employees.forEach(employee => { %>
@@ -16,8 +16,9 @@
                 <% }); %>
             </ul>
         <% } else { %>
-            <p>No employees found.</p>
+            <p>No matching employees found.</p>
         <% } %>
+        <a href="/findEmployee" class="btn btn-primary mt-3">Back to Find</a>
     </div>
     <a href="/" class="back-link"><button class="btn btn-primary">Back to Home</button></a>
 </div>
