@@ -1,0 +1,20 @@
+{
+  "name": "employee-management-system",
+  "version": "1.0.0",
+  "description": "Presidio Hiring Challenge To Create A Employee MAnagement System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "Hirthick Raj",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^8.0.1",
+    "passport": "^0.6.0"
+  }
+}
